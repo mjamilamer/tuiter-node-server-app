@@ -5,7 +5,8 @@ import UserController from "./controllers/users/users-controller.js";
 import TuitsController from "./controllers/tuits/tuits-controller.js";
 
 const app = express();
-
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.01:27017/tuiter'
+mongoose.connect(CONNECTION_STRING);
 // app.get('/hello', (req, res) => {res.send("Like is good!")})
 // app.get('/', (req, res) =>  {res.send("Welcome to Full Stack Development!")})
 app.use(cors());

@@ -6,6 +6,10 @@ const createTuit = (req, res) => {
   newTuit._id = new Date().getTime() + "";
   newTuit.likes = 0;
   newTuit.liked = false;
+  newTuit.avatar = "google.jpg";
+  newTuit.topic= "Google";
+  newTuit.userName= "Google";
+  newTuit.handle= "@Google";
   tuits.push(newTuit);
   res.json(newTuit);
 };
